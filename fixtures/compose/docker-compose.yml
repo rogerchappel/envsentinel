@@ -1,0 +1,6 @@
+services:
+  app:
+    image: example/app
+    environment:
+      - DATABASE_URL=postgres://compose
+      REDIS_URL: redis://cache
