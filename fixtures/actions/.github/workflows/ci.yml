@@ -1,0 +1,9 @@
+name: ci
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      CI_DATABASE_URL: postgres://ci
+    steps:
+      - run: echo ok
