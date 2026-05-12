@@ -1,0 +1,4 @@
+{
+  "required": ["DATABASE_URL"],
+  "ignoreVariables": []
+}
