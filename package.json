@@ -4,14 +4,14 @@
   "description": "Local-first environment contract auditor for examples, docs, CI, compose, and code references.",
   "type": "module",
   "bin": {
-    "envsentinel": "./dist/cli.js"
+    "envsentinel": "./dist/src/cli.js"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
     }
   },
   "files": [
@@ -27,7 +27,14 @@
     "package:smoke": "npm pack --dry-run",
     "release:check": "npm test && npm run check && npm run build && npm run smoke && npm run package:smoke"
   },
-  "keywords": ["env", "dotenv", "cli", "audit", "configuration", "typescript"],
+  "keywords": [
+    "env",
+    "dotenv",
+    "cli",
+    "audit",
+    "configuration",
+    "typescript"
+  ],
   "author": "Roger Chappel",
   "license": "MIT",
   "devDependencies": {
