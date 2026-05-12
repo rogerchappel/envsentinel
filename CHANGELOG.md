@@ -19,3 +19,5 @@ format and uses semantic versioning when versioned releases are published.
   `https://github.com/rogerchappel/users-roger-developer-my-opensource-envsentinel/releases/latest`
 
 Replace placeholder links once the first release tag exists.
+
+- Added TypeScript CLI MVP, fixture-backed tests, deterministic reports, and smoke validation.
