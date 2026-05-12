@@ -1,0 +1,8 @@
+{
+  "required": [],
+  "ignoreFiles": ["fixtures/**", "examples/**", "reports/**"],
+  "ignoreVariables": ["NODE_ENV", "CI", "GITHUB_TOKEN"],
+  "severity": {
+    "documented-unused": "info"
+  }
+}
