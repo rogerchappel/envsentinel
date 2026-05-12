@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { scan } from '../src/scan.js';
 
-const fixture = (name: string) => new URL(`../fixtures/${name}/`, import.meta.url).pathname;
+const fixture = (name: string) => new URL(`../fixtures/${name}/`, `file://${process.cwd()}/test/`).pathname;
 
 describe('scan', () => {
   it('accepts a clean fixture', () => {
