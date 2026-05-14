@@ -3,7 +3,7 @@ import { location } from '../utils/text.js';
 
 const patterns = [
   /process\.env\.([A-Z][A-Z0-9_]*)/g,
-  /process\.env\[['"]([A-Z][A-Z0-9_]*)['"]\]/g,
+  /process\.env\s*\[\s*['"]([A-Z][A-Z0-9_]*)['"]\s*\]/g,
   /import\.meta\.env\.([A-Z][A-Z0-9_]*)/g,
   /Deno\.env\.get\(['"]([A-Z][A-Z0-9_]*)['"]\)/g
 ];
