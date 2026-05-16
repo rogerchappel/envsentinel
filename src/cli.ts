@@ -70,7 +70,7 @@ function init(target: string): number {
 }
 
 function help(): void {
-  process.stdout.write(`EnvSentinel\n\nUsage:\n  envsentinel scan [path] [--out report.md] [--format json|markdown] [--fail-on low|medium|high]\n  envsentinel init [path]\n`);
+  process.stdout.write(`EnvSentinel\n\nUsage:\n  envsentinel scan [path] [--out report.md] [--format json|markdown] [--fail-on info|low|medium|high]\n  envsentinel init [path]\n`);
 }
 
 try { process.exitCode = main(process.argv.slice(2)); }

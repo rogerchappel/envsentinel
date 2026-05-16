@@ -10,6 +10,11 @@ function run(args: string[]): string {
 }
 
 describe('cli', () => {
+  it('prints help with all fail-on severities', () => {
+    const output = run(['--help']);
+    assert.match(output, /--fail-on info\|low\|medium\|high/);
+  });
+
   it('accepts options before the scan target', () => {
     const output = run(['scan', '--format', 'json', fixture('clean')]);
     const parsed = JSON.parse(output);
