@@ -11,8 +11,8 @@ describe('parsers', () => {
   });
 
   it('parses common code references', () => {
-    const vars = parseCodeRefs('app.ts', 'process.env.API_TOKEN; import.meta.env.VITE_URL;');
-    assert.deepEqual(vars.map((item) => item.name), ['API_TOKEN', 'VITE_URL']);
+    const vars = parseCodeRefs('app.ts', 'process.env.API_TOKEN; process.env [ "WORKER_SECRET" ]; import.meta.env.VITE_URL;');
+    assert.deepEqual(vars.map((item) => item.name), ['API_TOKEN', 'WORKER_SECRET', 'VITE_URL']);
   });
 
   it('parses docs env names', () => {
