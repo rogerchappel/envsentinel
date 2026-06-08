@@ -58,3 +58,15 @@ node dist/cli.js scan fixtures/secret-example --fail-on high
 ```
 
 Reports are deterministic Markdown or JSON, making them easy to diff in pull requests.
+
+## Development
+
+```sh
+git clone https://github.com/rogerchappel/undefined.git
+cd undefined
+npm install
+npm test
+npm run smoke
+npm run package:smoke
+npm run release:check
+```
