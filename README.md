@@ -62,8 +62,8 @@ Reports are deterministic Markdown or JSON, making them easy to diff in pull req
 ## Development
 
 ```sh
-git clone https://github.com/rogerchappel/undefined.git
-cd undefined
+git clone https://github.com/rogerchappel/envsentinel.git
+cd envsentinel
 npm install
 npm test
 npm run smoke
