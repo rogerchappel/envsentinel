@@ -59,6 +59,16 @@ node dist/cli.js scan fixtures/secret-example --fail-on high
 
 Reports are deterministic Markdown or JSON, making them easy to diff in pull requests.
 
+For a fixture-backed walkthrough that writes both a clean Markdown report and a
+failing drift JSON report, run:
+
+```bash
+bash demo/contract-drift-smoke.sh
+```
+
+See [the contract drift demo](docs/tutorials/contract-drift-demo.md) for the
+review checklist and promotion-safe talking points.
+
 ## Development
 
 ```sh
