@@ -7,3 +7,4 @@ coverage/
 !.env.sample
 *.log
 reports/
+demo/output/

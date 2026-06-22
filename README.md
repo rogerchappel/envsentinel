@@ -69,6 +69,14 @@ bash demo/contract-drift-smoke.sh
 See [the contract drift demo](docs/tutorials/contract-drift-demo.md) for the
 review checklist and promotion-safe talking points.
 
+Run the fixture-backed demo to generate passing, drifting, and high-severity reports:
+
+```sh
+bash demo/env-contract-drift.sh
+```
+
+The walkthrough in [docs/tutorials/ci-env-contract-audit.md](docs/tutorials/ci-env-contract-audit.md) shows how to adapt the same scan pattern into a pull request check.
+
 ## Development
 
 ```sh
