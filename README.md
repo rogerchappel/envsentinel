@@ -59,6 +59,20 @@ node dist/cli.js scan fixtures/secret-example --fail-on high
 
 Reports are deterministic Markdown or JSON, making them easy to diff in pull requests.
 
+## Demo walkthrough
+
+For a fixture-backed PR review flow, run:
+
+```bash
+npm run build
+bash demo/run-contract-scan.sh
+```
+
+Then open `demo/output/drift-report.md`. The walkthrough in
+[`docs/tutorials/env-contract-pr-review.md`](docs/tutorials/env-contract-pr-review.md)
+explains how to use the report as review evidence. Promotion-ready post drafts
+live in [`docs/promo/social-hooks.md`](docs/promo/social-hooks.md).
+
 For a fixture-backed walkthrough that writes both a clean Markdown report and a
 failing drift JSON report, run:
 
