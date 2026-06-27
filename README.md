@@ -73,14 +73,57 @@ Then open `demo/output/drift-report.md`. The walkthrough in
 explains how to use the report as review evidence. Promotion-ready post drafts
 live in [`docs/promo/social-hooks.md`](docs/promo/social-hooks.md).
 
+For a fixture-backed walkthrough that writes both a clean Markdown report and a
+failing drift JSON report, run:
+
+```bash
+bash demo/contract-drift-smoke.sh
+```
+
+See [the contract drift demo](docs/tutorials/contract-drift-demo.md) for the
+review checklist and promotion-safe talking points.
+
+Run the fixture-backed demo to generate passing, drifting, and high-severity reports:
+
+```sh
+bash demo/env-contract-drift.sh
+```
+
+The walkthrough in [docs/tutorials/ci-env-contract-audit.md](docs/tutorials/ci-env-contract-audit.md) shows how to adapt the same scan pattern into a pull request check.
+
 ## Development
 
 ```sh
-git clone https://github.com/rogerchappel/undefined.git
-cd undefined
+git clone https://github.com/rogerchappel/envsentinel.git
+cd envsentinel
 npm install
 npm test
 npm run smoke
 npm run package:smoke
 npm run release:check
 ```
+
+## Development
+
+Run the same checks locally before opening a change:
+
+```sh
+npm ci
+npm run check
+npm run build
+npm test
+npm run smoke
+npm run package:smoke
+npm run release:check
+```
+
+## Release readiness
+
+Before opening a release PR, run the same checks that CI runs:
+
+```sh
+npm run release:check
+npm pack --dry-run
+```
+
+The package smoke keeps the published tarball contents visible before tagging or publishing.
